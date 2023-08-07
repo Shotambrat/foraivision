@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const clId= "0683088a08764acf8aaf1ccdb852c6d3";
-const redirectUrl = "http://localhost:3000/auth";
+const clId= "507d4ceeed5c47c09060c1891eabf735";
+const redirectUrl = "https://foraivision.vercel.app/";
 const authUrl = `https://oauth.yandex.ru/authorize?response_type=token&client_id=${clId}&redirect_uri=${redirectUrl}`;
 
 export const getToken = () => {
