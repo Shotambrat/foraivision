@@ -1,0 +1,9 @@
+.mainlogo-box {
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.mainlogo {
+    height: 50px
+}

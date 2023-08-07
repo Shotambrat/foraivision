@@ -1,0 +1,32 @@
+.cluster-container {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    /* border: solid black 2px */
+}
+
+.logo-box {
+    /* margin: 7px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    /* border: solid black 2px; */
+    cursor: pointer;
+    color: rgb(180, 179, 179);
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+.img {
+    height: 30px;
+    width: 30px;
+}
+
+.logo-box:hover {
+    background-color: #A37C27;
+    color: white;
+}
