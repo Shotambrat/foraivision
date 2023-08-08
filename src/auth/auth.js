@@ -5,6 +5,8 @@ const redirectUrl = "https://foraivision.vercel.app/";
 const authUrl = `https://oauth.yandex.ru/authorize?response_type=token&client_id=${clId}&redirect_uri=${redirectUrl}`;
 
 export const getToken = () => {
+    // .substr(1).split('&')
+    // [0].split('=')[1]
     const hashParams = window.location.hash.substr(1).split('&');
     const accessToken = hashParams[0].split('=')[1];
 
@@ -17,12 +19,14 @@ export const getToken = () => {
 };
 
 export const fetchUserData = async (accessToken) => {
-    let response = await axios.get("https://login.yandex.ru/info", {
+    let response = await axios.get('https://login.yandex.ru/info', {
         headers: {
-            'Authorization': `OAuth ${accessToken}`,
+            'Authorization': `Bearer ${accessToken}`,
         },
     });
 
-    console.log(response.data);
-    console.log(response.request)
+    console.log(response.data)
+
+    return response.data;
+
 };
