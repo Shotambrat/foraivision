@@ -4,7 +4,7 @@ import './Content.css';
 
 export default function Content () {
 
-    const [selectedFile, setSelectedFile] = useState({})
+    const [selectedFile, setSelectedFile] = useState()
 
     useEffect(() => {
         const fileInput = document.querySelector('.fileInput');

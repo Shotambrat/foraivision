@@ -44,7 +44,7 @@ export default function Cluster() {
                     Корзина
                 </div>
             </Link>
-                <Route path="/cluster" component={Content} />
+                {/* <Route path="/cluster" component={Content} /> */}
         </div>
     )
 }
