@@ -11,8 +11,9 @@ module.exports = function(app) {
                 '^/api': '',
             },
             headers: {
-                'Authorization': `Bearer ${store.getState().token}`,
+                'Authorization': `OAuth ${store.getState().token}`,
             },
         })
     );
+    console.log(store.getState().token)
 };
