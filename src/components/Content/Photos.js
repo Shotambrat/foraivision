@@ -1,11 +1,24 @@
 /* eslint-disable array-callback-return */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './Styles/Photos.css'
+import { fetchUserData } from '../../auth/auth';
 
 export default function Photos () {
     const photos = useSelector(state => state.photos);
 
+    useEffect(() => {
+        const loadData = async () => {
+            try {
+                let response = await fetchUserData();
+                console.log(response);
+                console.log(response.data)
+            } catch (error) {
+                console.log(error, 'Oshibojka');
+            }
+        };
+        loadData()
+    }, [])
     // console.log(`State ${photos}`);
     // console.log(photos)
     // console.log([3, 43, 'dfdfj', 34])

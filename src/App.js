@@ -21,7 +21,8 @@ export default function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        setTaken(getToken());
+        let response = await getToken();
+        setTaken(response);
         console.log(token);
         dispatch(setToken(token));
       } catch (error) {
