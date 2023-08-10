@@ -6,6 +6,7 @@ import { fetchUserData } from '../../auth/auth';
 
 export default function Photos () {
     const photos = useSelector(state => state.photos);
+    const token = useSelector(state => state.token)
 
     useEffect(() => {
         const loadData = async () => {
@@ -22,6 +23,8 @@ export default function Photos () {
     // console.log(`State ${photos}`);
     // console.log(photos)
     // console.log([3, 43, 'dfdfj', 34])
+    console.log(`token is ${token}`)
+    console.log(token)
     return (
         <>
             <div className='photos-container'>

@@ -15,5 +15,4 @@ module.exports = function(app) {
             },
         })
     );
-    console.log(store.getState().token)
 };
