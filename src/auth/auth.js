@@ -18,15 +18,8 @@ export const getToken = () => {
     }
 };
 
-export const fetchUserData = async (accessToken) => {
-    let response = await axios.get('https://login.yandex.ru/info', {
-        headers: {
-            'Authorization': `Bearer ${accessToken}`,
-        },
-    });
-
+export const fetchUserData = async () => {
+    let response = await axios.get('/api/resources');
     console.log(response.data)
-
-    return response.data;
-
+    return response;
 };

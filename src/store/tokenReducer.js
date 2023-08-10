@@ -1,16 +1,10 @@
-//Из-за того что не смог решить проблему с CORS YANDEX_NETWORK ERR
-
-
-
-import {SET_TOKEN} from '../actions/action'
-
 const initialState = {
-    token: null,
+    token: '',
 };
 
 export const tokenReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_TOKEN:
+        case 'SET_TOKEN':
             return {
             ...state,
             token: action.payload,

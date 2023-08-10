@@ -57,8 +57,8 @@ export default function Content () {
             </div>
             <div className='data-container'>
                 <div className='img-container'>
+                <Photos />
                 <Routes>
-                    <Route path="/cluster/photo" element={<Photos />} /> 
                     <Route path="/cluster/files" element={<Files />} /> 
                     <Route path="/cluster/albom" element={<Albom />} /> 
                     <Route path="/cluster/trash" element={<Trash />} /> 
@@ -85,6 +85,7 @@ export default function Content () {
 
                                     {photos.map((photo, index) => (
                                         <div key={index}>
+                                            {console.log(photo)}
                                             <img className='photo-box' src={URL.createObjectURL(photo)} alt="Selected" />
                                         </div>
                                     ))}

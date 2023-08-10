@@ -4,24 +4,26 @@ import Content from './components/Content/Content'
 import Loading from './auth/Loading';
 import { getToken, fetchUserData } from './auth/auth';
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setToken } from './actions/action';
+
 // import { fetchResources } from './actions/resourses';
 // import { useSelector, useDispatch } from 'react-redux';
 
 export default function App() {
-
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const resources = useSelector(state => state.resources.resources);
   // // const loading = useSelector(state => state.resources.loading);
   // const error = useSelector(state => state.resources.error);
   const [loading, setLoading] = useState(true)
+  const [token, setTaken] = useState(undefined);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const accessToken = await getToken();
-        console.log(accessToken)
-        const response = await fetchUserData(accessToken);
-        return response.data;
+        setTaken(getToken());
+        console.log(token);
+        dispatch(setToken(token));
       } catch (error) {
         console.log(error, 'Oshibojka');
       }
