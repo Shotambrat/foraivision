@@ -1,3 +1,7 @@
+//Из-за того что не смог решить проблему с CORS YANDEX_NETWORK ERR
+
+
+
 import {SET_TOKEN} from '../actions/action'
 
 const initialState = {

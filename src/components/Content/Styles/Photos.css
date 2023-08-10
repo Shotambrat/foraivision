@@ -1,0 +1,14 @@
+.photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.photo-box {
+    height: 150px;
+    width: 200px;
+    border: solid rgb(122, 116, 116) 1px;
+    border-radius: 10px;
+}

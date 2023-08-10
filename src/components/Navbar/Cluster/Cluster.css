@@ -14,6 +14,7 @@
     height: 80px;
     width: 80px;
     border-radius: 20px;
+    text-decoration: none;
     /* border: solid black 2px; */
     cursor: pointer;
     color: rgb(180, 179, 179);
@@ -40,4 +41,15 @@
           -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+b {
+    text-decoration: none;
+}
+
+.active {
+    border-radius: 20px;
+    background-color: #A37C27;
+    color: white;
 }

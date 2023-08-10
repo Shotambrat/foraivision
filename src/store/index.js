@@ -1,10 +1,10 @@
 import {createStore, combineReducers} from 'redux';
-import { dataReducer } from './dataReduser';
-import { tokenReducer } from './tokenReducer';
+import filesReducer from './filesReducer';
+import photosReducer from './photoReducer.js';
 
 const rootRedusers = combineReducers({
-    data: dataReducer,
-    token: tokenReducer,
+    photos: photosReducer,
+    files: filesReducer,
 })
 
 
