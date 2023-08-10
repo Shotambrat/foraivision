@@ -2,7 +2,7 @@ import './styles/App.css';
 import Navbar from './components/Navbar/Navbar'
 import Content from './components/Content/Content'
 import Loading from './auth/Loading';
-import { getToken, fetchUserData } from './auth/auth';
+import { getToken } from './auth/auth';
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setToken } from './actions/action';
