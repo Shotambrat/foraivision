@@ -7,7 +7,7 @@ const authUrl = `https://oauth.yandex.ru/authorize?response_type=token&client_id
 export const getToken = () => {
     // .substr(1).split('&')
     // [0].split('=')[1]
-    const hashParams = window.location.hash.substr(1).split('&');
+    const hashParams = window.locationhash.substr(1).split('&');
     const accessToken = hashParams[0].split('=')[1];
 
     if (accessToken) {

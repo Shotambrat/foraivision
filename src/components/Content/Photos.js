@@ -12,7 +12,7 @@ export default function Photos () {
             try {
                 let response = await fetchUserData();
                 console.log(response.json());
-                console.log(response.data)
+                console.log(response)
             } catch (error) {
                 console.log(error, 'Oshibojka');
             }
