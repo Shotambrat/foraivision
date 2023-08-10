@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'https://cloud-api.yandex.net/v1/disk',
+            target: 'https://login.yandex.ru/info',
             changeOrigin: true,
             pathRewrite: {
                 '^/api': '',

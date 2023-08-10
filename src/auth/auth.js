@@ -19,7 +19,7 @@ export const getToken = () => {
 };
 
 export const fetchUserData = async () => {
-    let response = await axios.get('/api/resources');
+    let response = await axios.get('/api');
     console.log(response.data)
     return response;
 };
