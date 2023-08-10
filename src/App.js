@@ -16,12 +16,13 @@ export default function App() {
   // // const loading = useSelector(state => state.resources.loading);
   // const error = useSelector(state => state.resources.error);
   const [loading, setLoading] = useState(true)
-  const [token, setTaken] = useState(undefined);
+  const [token, setTaken] = useState('');
 
   useEffect(() => {
     const loadData = async () => {
       try {
         let response = await getToken();
+        console.log(response);
         setTaken(response);
         console.log(token);
         dispatch(setToken(token));
