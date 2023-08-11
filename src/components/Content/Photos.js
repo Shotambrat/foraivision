@@ -35,7 +35,7 @@ export default function Photos () {
     
     // Photos
     // const dispatch = useDispatch();
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState('')
     const token = useSelector(state => state.token.token);
     console.log(`TOKEN PHOTOJS IS ${token}`)
 
@@ -55,11 +55,12 @@ export default function Photos () {
         });
     }, [])
 
+    console.log(`user iz State ${user}`)
+
     return (
         <div>
             <div className='photos-container'>
                 fototto
-                {user}
             </div>
         </div>
     )
