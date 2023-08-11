@@ -11,7 +11,7 @@ module.exports = function(app) {
                 '^/api': '',
             },
             headers: {
-                'Authorization': 'y0_AgAAAABpirqGAApNHAAAAADpp4jEU3pFf3lWRSubGhaP8rq7UcHEb2c'
+                'Authorization': 'Bearer y0_AgAAAABpirqGAApNHAAAAADpp4jEU3pFf3lWRSubGhaP8rq7UcHEb2c'
             },
         })
     );
