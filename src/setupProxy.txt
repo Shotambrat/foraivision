@@ -1,4 +1,8 @@
-// import {store} from './store';
+?? Типо сперва пытался отправить чистые запросы с фронта с помощью ПРОКСИ-сервера, но что то не получилось))) ??
+
+
+
+import {store} from './store';
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {

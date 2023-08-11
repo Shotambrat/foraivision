@@ -22,9 +22,9 @@ export default function App() {
     const loadData = async () => {
       try {
         let response = await getToken();
-        console.log(response);
+        // console.log(response);
         setTaken(response);
-        console.log(token);
+        // console.log(token);
         dispatch(setToken(response));
       } catch (error) {
         console.log(error, 'Oshibojka');
