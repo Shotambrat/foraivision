@@ -51,7 +51,7 @@ export default function Photos () {
             setUser(response)
         })
         .catch((error) => {
-            console.log(error);
+            console.log(error, 'zdes oshibka');
         });
     }, [])
 
