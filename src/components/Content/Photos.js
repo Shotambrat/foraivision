@@ -11,7 +11,7 @@ export default function Photos () {
         try {
             let response = await fetchUserData();
             console.log(response)
-            console.log(response.json());
+            console.log(response.request);
             console.log(response.data);
             return response;
         } catch (error) {
