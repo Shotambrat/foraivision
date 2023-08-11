@@ -1,4 +1,4 @@
-import {store} from './store';
+// import {store} from './store';
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -11,8 +11,8 @@ module.exports = function(app) {
                 '^/api': '',
             },
             headers: {
-                'Authorization': 'OAuth y0_AgAAAABpirqGAApNHAAAAADpp4jEU3pFf3lWRSubGhaP8rq7UcHEb2c'
-            },
+                'Authorization': 'Bearer y0_AgAAAABpirqGAApNHAAAAADpp4jEU3pFf3lWRSubGhaP8rq7UcHEb2c'
+            }
         })
     );
 };

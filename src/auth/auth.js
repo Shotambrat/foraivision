@@ -20,6 +20,6 @@ export const getToken = () => {
 
 export const fetchUserData = async () => {
     let response = await axios.get('/api');
-    console.log(response.data)
+    console.log(response.json())
     return response;
 };

@@ -10,8 +10,10 @@ export default function Photos () {
     const loadData = async () => {
         try {
             let response = await fetchUserData();
-            console.log(response);
-            console.log(response.data)
+            console.log(response)
+            console.log(response.json);
+            console.log(response.data);
+            return response;
         } catch (error) {
             console.log(error, 'Oshibojka');
         }
