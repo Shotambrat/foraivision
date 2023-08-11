@@ -11,8 +11,10 @@ module.exports = function(app) {
                 '^/api': '',
             },
             headers: {
-                'Authorization': `Bearer ${store.getState().token.token}`,
+                'Authorization': 'y0_AgAAAABpirqGAApNHAAAAADpp4jEU3pFf3lWRSubGhaP8rq7UcHEb2c'
             },
         })
     );
 };
+
+// `OAuth ${store.getState().token.token}`
