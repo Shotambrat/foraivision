@@ -1,4 +1,4 @@
-import store from './store';
+import {store} from './store';
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -11,7 +11,7 @@ module.exports = function(app) {
                 '^/api': '',
             },
             headers: {
-                'Authorization': `Bearer ${store.getState().token}`,
+                'Authorization': `Bearer ${store.getState().token.token}`,
             },
         })
     );

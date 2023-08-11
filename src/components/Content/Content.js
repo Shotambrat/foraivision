@@ -40,6 +40,8 @@ export default function Content () {
             setShowModal(true);
         }
     };
+
+
     
     const handleSubmit = () => {
         dispatch(addPhotos(photos));
