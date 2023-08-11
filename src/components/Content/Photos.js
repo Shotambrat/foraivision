@@ -43,7 +43,7 @@ export default function Photos () {
         axios
         .get('http://localhost:7777/user', {
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': token,
             },
         })
         .then((response) => {
