@@ -16,7 +16,7 @@ export default function App() {
   // // const loading = useSelector(state => state.resources.loading);
   // const error = useSelector(state => state.resources.error);
   const [loading, setLoading] = useState(true)
-  const [token, setTaken] = useState('');
+  const [token, setTaken] = useState();
 
   useEffect(() => {
     const loadData = async () => {
@@ -25,7 +25,7 @@ export default function App() {
         console.log(response);
         setTaken(response);
         console.log(token);
-        dispatch(setToken(token));
+        dispatch(setToken(response));
       } catch (error) {
         console.log(error, 'Oshibojka');
       }
