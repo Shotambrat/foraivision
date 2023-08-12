@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import './Styles/Photos.css'
-import { setPhoto } from '../../actions/action'
 import axios from 'axios';
 // import { fetchUserData } from '../../auth/auth';
 
 export default function Photos () {
+
     // const photos = useSelector(state => state.photos);
     // const loadData = async () => {
     //     try {
@@ -35,33 +35,41 @@ export default function Photos () {
     
     // Photos
     // const dispatch = useDispatch();
-    const [user, setUser] = useState('')
     const token = useSelector(state => state.token.token);
-    console.log(`TOKEN PHOTOJS IS ${token}`)
+    const [userData, setUserData] = useState({});
 
     useEffect(() => {
-        axios
-        .get('http://localhost:7777/user', {
-            headers: {
-                'Authorization': `Bearer ${token}`,
-            },
-        })
-        .then((response) => {
-            console.log(response);
-            setUser(response)
-        })
-        .catch((error) => {
-            console.log(error, 'zdes oshibka');
-        });
-    }, [])
+        const url = 'http://localhost:7777/user/data';
+        const headers = { 'Authorization': token, 'Content-Type': 'application/json' };
+    
+        axios.get(url, { headers })
+            .then((response) => {
+                setUserData(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+    
 
-    console.log(`user iz State ${user}`)
+    console.log(`TOKEN PHOTOJS IS ${token}`)
+
+    if (!userData) {
+        return <h1>Пока фото нет)))</h1>
+    }
 
     return (
         <div>
-            <div className='photos-container'>
-                fototto
-            </div>
+            {userData &&
+                < div className='for-content'>
+                        {userData.map((photo, index) => (
+                            <div key={index}>
+                                {console.log(photo)}
+                                <img className='photo-box' src={URL.createObjectURL(photo)} alt="Selected" />
+                            </div>
+                        ))}
+                </div>
+            }
         </div>
     )
 }

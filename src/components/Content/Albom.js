@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Albom() {
     return (
-        <div></div>
+        <div>Альбомов пока у вас нет</div>
     )
 }
