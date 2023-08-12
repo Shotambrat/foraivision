@@ -15,7 +15,7 @@ import AvaSrc from './6386976.png'
 
 export default function Aboutme() {
     const token = useSelector(state => state.token.token);
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState({});
 
     const [open, setOpen] = React.useState(false);
 
