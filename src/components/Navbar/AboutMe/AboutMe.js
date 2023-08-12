@@ -57,13 +57,13 @@ export default function Aboutme() {
                 <DialogTitle>{"ABOUT USER"}</DialogTitle>
                 <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
-                    {user && 
+                    {/* {user && 
                         <div>
                         Your login: {user.login}.
                         Fullname: {user.real_name}.
                         YourPhone: {user.default_phone.number}
                         </div>
-                    }
+                    } */}
                 </DialogContentText>
                 </DialogContent>
                 <DialogActions>
