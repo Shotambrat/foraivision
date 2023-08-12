@@ -36,7 +36,7 @@ export default function Photos () {
     // Photos
     // const dispatch = useDispatch();
     const token = useSelector(state => state.token.token);
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState([]);
 
     useEffect(() => {
         const url = 'http://localhost:7777/user/data';
