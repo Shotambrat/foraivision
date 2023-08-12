@@ -17,7 +17,7 @@ export default function Aboutme() {
     const token = useSelector(state => state.token.token);
     const [user, setUser] = useState({});
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -67,8 +67,7 @@ export default function Aboutme() {
                 </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                <Button onClick={handleClose}>Disagree</Button>
-                <Button onClick={handleClose}>Agree</Button>
+                <Button onClick={handleClose}>close</Button>
                 </DialogActions>
             </Dialog>
         </Button>
